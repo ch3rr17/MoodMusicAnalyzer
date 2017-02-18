@@ -1,0 +1,334 @@
+[
+  {
+    "id": 1,
+    "mood": "Aggravated"
+  },
+  {
+    "id": 2,
+    "mood": "Amused"
+  },
+  {
+    "id": 3,
+    "mood": "Angry"
+  },
+  {
+    "id": 4,
+    "mood": "Annoyed"
+  },
+  {
+    "id": 5,
+    "mood": "Anxious"
+  },
+  {
+    "id": 6,
+    "mood": "Apathetic"
+  },
+  {
+    "id": 7,
+    "mood": "Bewildered"
+  },
+  {
+    "id": 8,
+    "mood": "Blissful"
+  },
+  {
+    "id": 9,
+    "mood": "Bouncy"
+  },
+  {
+    "id": 10,
+    "mood": "Calm"
+  },
+  {
+    "id": 11,
+    "mood": "Cheerful"
+  },
+  {
+    "id": 12,
+    "mood": "Complacent"
+  },
+  {
+    "id": 13,
+    "mood": "Confused"
+  },
+  {
+    "id": 14,
+    "mood": "Content"
+  },
+  {
+    "id": 15,
+    "mood": "Cranky"
+  },
+  {
+    "id": 16,
+    "mood": "Crappy"
+  },
+  {
+    "id": 17,
+    "mood": "Crazy"
+  },
+  {
+    "id": 18,
+    "mood": "Curious"
+  },
+  {
+    "id": 19,
+    "mood": "Cynical"
+  },
+  {
+    "id": 20,
+    "mood": "Depressed"
+  },
+  {
+    "id": 21,
+    "mood": "Devious"
+  },
+  {
+    "id": 22,
+    "mood": "Disappointed"
+  },
+  {
+    "id": 23,
+    "mood": "Discontent"
+  },
+  {
+    "id": 24,
+    "mood": "Ditzy"
+  },
+  {
+    "id": 25,
+    "mood": "Dreamy"
+  },
+  {
+    "id": 26,
+    "mood": "Ecstatic"
+  },
+  {
+    "id": 27,
+    "mood": "Energetic"
+  },
+  {
+    "id": 28,
+    "mood": "Enraged"
+  },
+  {
+    "id": 29,
+    "mood": "Enthralled"
+  },
+  {
+    "id": 30,
+    "mood": "Envious"
+  },
+  {
+    "id": 31,
+    "mood": "Excited"
+  },
+  {
+    "id": 32,
+    "mood": "Flirty"
+  },
+  {
+    "id": 33,
+    "mood": "Frustrated"
+  },
+  {
+    "id": 34,
+    "mood": "Giddy"
+  },
+  {
+    "id": 35,
+    "mood": "Giggly"
+  },
+  {
+    "id": 36,
+    "mood": "Gloomy"
+  },
+  {
+    "id": 37,
+    "mood": "Good"
+  },
+  {
+    "id": 38,
+    "mood": "Grateful"
+  },
+  {
+    "id": 39,
+    "mood": "Grumpy"
+  },
+  {
+    "id": 40,
+    "mood": "Guilty"
+  },
+  {
+    "id": 41,
+    "mood": "Happy"
+  },
+  {
+    "id": 42,
+    "mood": "High"
+  },
+  {
+    "id": 43,
+    "mood": "Hopeful"
+  },
+  {
+    "id": 44,
+    "mood": "Impressed"
+  },
+  {
+    "id": 45,
+    "mood": "Indifferent"
+  },
+  {
+    "id": 46,
+    "mood": "Infuriated"
+  },
+  {
+    "id": 47,
+    "mood": "Irate"
+  },
+  {
+    "id": 48,
+    "mood": "Irritated"
+  },
+  {
+    "id": 49,
+    "mood": "Jealous"
+  },
+  {
+    "id": 50,
+    "mood": "Joyful"
+  },
+  {
+    "id": 51,
+    "mood": "Jubilant"
+  },
+  {
+    "id": 52,
+    "mood": "Lazy"
+  },
+  {
+    "id": 53,
+    "mood": "Lethargic"
+  },
+  {
+    "id": 54,
+    "mood": "Listless"
+  },
+  {
+    "id": 55,
+    "mood": "Lonely"
+  },
+  {
+    "id": 56,
+    "mood": "Loved"
+  },
+  {
+    "id": 57,
+    "mood": "Mad"
+  },
+  {
+    "id": 58,
+    "mood": "Melancholy"
+  },
+  {
+    "id": 59,
+    "mood": "Mellow"
+  },
+  {
+    "id": 60,
+    "mood": "Mischievous"
+  },
+  {
+    "id": 61,
+    "mood": "Moody"
+  },
+  {
+    "id": 62,
+    "mood": "Mournful"
+  },
+  {
+    "id": 63,
+    "mood": "Numb"
+  },
+  {
+    "id": 64,
+    "mood": "Optimistic"
+  },
+  {
+    "id": 65,
+    "mood": "Peaceful"
+  },
+  {
+    "id": 66,
+    "mood": "Pessimistic"
+  },
+  {
+    "id": 67,
+    "mood": "Pleased"
+  },
+  {
+    "id": 68,
+    "mood": "Rejected"
+  },
+  {
+    "id": 69,
+    "mood": "Rejuvenated"
+  },
+  {
+    "id": 70,
+    "mood": "Relaxed"
+  },
+  {
+    "id": 71,
+    "mood": "Relieved"
+  },
+  {
+    "id": 72,
+    "mood": "Restless"
+  },
+  {
+    "id": 73,
+    "mood": "Sad"
+  },
+  {
+    "id": 74,
+    "mood": "Satisfied"
+  },
+  {
+    "id": 75,
+    "mood": "Shocked"
+  },
+  {
+    "id": 76,
+    "mood": "Silly"
+  },
+  {
+    "id": 77,
+    "mood": "Smart"
+  },
+  {
+    "id": 78,
+    "mood": "Stressed"
+  },
+  {
+    "id": 79,
+    "mood": "Surprised"
+  },
+  {
+    "id": 80,
+    "mood": "Sympathetic"
+  },
+  {
+    "id": 81,
+    "mood": "Thankful"
+  },
+  {
+    "id": 82,
+    "mood": "Uncomfortable"
+  },
+  {
+    "id": 83,
+    "mood": "Weird"
+  }
+]
