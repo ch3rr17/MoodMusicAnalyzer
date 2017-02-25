@@ -9,12 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.1",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-inject": "^4.2.0",
     "gulp-livereload": "^3.8.1",
     "gulp-open": "^2.0.0",
     "gulp-util": "^3.0.8",
-    "wiredep": "^4.0.0"
+    "request": "^2.79.0",
+    "spotify": "^0.3.0",
+    "wiredep": "^4.0.0",
+    "serve-favicon": "^2.3.2"
   }
 }

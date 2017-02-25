@@ -1,1 +1,14 @@
-<p>{{vm.moods}}</p>
+<img id="mood-banner" src="app/images/moods.png" alt="">
+<!-- BUTTON GROUP OF MOODS -->
+<div class="container">
+    <div class="row">
+        <div class='col-xs-12 col-md-12 text-center'>
+            <h1 style="padding-bottom: 10px;">How are you feeling today? Select among top moods!</h1>
+            <div class="btn-group btn-group" role="group" ng-repeat="mood in vm.moods">
+                <a ui-sref="sentiment({mood: '{{mood.mood}}'})">
+                    <button class="btn mood">{{mood.mood}}</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

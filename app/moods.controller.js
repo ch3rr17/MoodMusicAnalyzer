@@ -17,7 +17,6 @@
                 .then(
                     function(response) {
                         vm.moods = response.data;
-                        console.log(response.data);
                     },
                     function(error) {
                         toastr.warning('no moods found');

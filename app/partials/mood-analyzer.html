@@ -1,0 +1,23 @@
+<div class="container main" id="sentiment">
+    <div class="container sentiment-menu">
+        <a ui-sref="mood" style="color: #fff; text-decoration: none; font-size: 14pt;">
+            <button class="btn change-mood">Change your mood?</button>
+        </a>
+    </div>
+    <div class="container sentiment-container" style="margin-top: 20px;">
+        <h3 class="text-center" style="padding-bottom:10px;">MUSIC AND IMAGES FOR {{vm.mood}}</h3>
+        <div class="row text-center">
+            <p>Your current mood, <strong><i>{{vm.mood}}</i></strong> has a <strong id="positive">{{(vm.sentiments.pos * 100).toFixed(2) + ' %'}}</strong> MOOD POSITIVITY and a <strong id="negative"> {{(vm.sentiments.neg * 100).toFixed(2) + ' %'}}</strong>                MOOD NEGATIVITY.</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 text-center'>
+            <iframe height="500px" width="100%" id='spotify-player' ng-src="{{vm.trustSrc(vm.albumEmbedPlayer)}}" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+        <div class='col-xs-12 col-sm-6 text-center'>
+            <div class='row text-center images-container'>
+                <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4' ng-repeat="moodImage in vm.moodImages | limitTo: 9">
+                    <marquee behavior="scroll" direction="down"><img ng-src="{{moodImage.display_sizes[0].uri}}.jpg" alt="" width="150px" height="150px" style="padding: 10px;"></marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
