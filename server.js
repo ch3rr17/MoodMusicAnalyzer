@@ -43,6 +43,6 @@ app.get('/images-for-mood/:mood', function(req, res) {
 });
 
 app.use(favicon(__dirname + '/app/favicon.ico'));
-app.use('/', express.static(__dirname + '/'));
+app.use('/', express.static(__dirname + '/app'));
 app.listen(port);
 console.log('App listening on port ' + port);
