@@ -23,8 +23,5 @@
     "serve-favicon": "^2.3.2",
     "spotify": "^0.3.0",
     "wiredep": "^4.0.0"
-  },
-  "engines": {
-    "node": "4.1.1"
   }
 }
