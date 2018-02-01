@@ -50,7 +50,6 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
-                        console.log('MUSIC RESPONSE', response);
                         // toastr.success("We have music for mood!");
                     },
                     function(error) {
@@ -72,7 +71,6 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
-                        console.log(response);
                         // toastr.success("We have images for mood");
                     },
                     function(error) {
