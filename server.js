@@ -41,7 +41,6 @@ app.get('/images-for-mood/:mood', function(req, res) {
     });
 });
 
-
-app.use('/', express.static(__dirname ));
+app.use('/', express.static(__dirname + '/app'));
 app.listen(port);
 console.log('App listening on port ' + port);
