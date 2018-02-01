@@ -24,7 +24,7 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
-                        toastr.success('we have moods!');
+                        // toastr.success('we have moods!');
                     },
                     function(error) {
                         defer.reject(error.data);

@@ -28,11 +28,11 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
-                        toastr.success("We have sentiments");
+                        // toastr.success("We have sentiments");
                     },
                     function(error) {
                         defer.reject(error.data)
-                        toastr.error("no sentiments found");
+                        // toastr.error("no sentiments found");
                     }
                 );
 
@@ -50,11 +50,12 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
-                        toastr.success("We have music for mood!");
+                        console.log('MUSIC RESPONSE', response);
+                        // toastr.success("We have music for mood!");
                     },
                     function(error) {
                         defer.reject(error.data);
-                        toastr.error("No music found");
+                        // toastr.error("No music found");
                     }
                 );
 
@@ -71,11 +72,12 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
-                        toastr.success("We have images for mood");
+                        console.log(response);
+                        // toastr.success("We have images for mood");
                     },
                     function(error) {
                         defer.reject(error.data);
-                        toastr.error("No images found");
+                        // toastr.error("No images found");
                     }
                 );
 
