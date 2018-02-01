@@ -2,7 +2,7 @@
   "name": "moodmusicanalyzer",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "node server.js",
     "postinstall": "bower install",
