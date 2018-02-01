@@ -35,10 +35,8 @@ app.get('/images-for-mood/:mood', function(req, res) {
     request(options, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             res.send(body);
-            console.log(body);
         } else {
             res.send(error);
-            console.log('imagesAPI', error);
         }
     });
 });
