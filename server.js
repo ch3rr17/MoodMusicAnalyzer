@@ -3,7 +3,7 @@ var app = express();
 var request = require('request');
 var keys = require('./secret');
 // var spotify = require('spotify');
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 4000;
 var favicon = require('serve-favicon');
 
 var Spotify = require('node-spotify-api');
@@ -29,7 +29,7 @@ app.get('/images-for-mood/:mood', function(req, res) {
     var options = {
         url: 'https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&phrase=' + req.params.mood,
         headers: {
-            'Api-Key': '732j6vdrs2jg4xttgggcwbhw'
+            'Api-Key': keys.gettyKey
         }
     };
 

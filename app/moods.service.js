@@ -19,7 +19,7 @@
             var defer = $q.defer();
             $http({
                     method: 'GET',
-                    url: 'app/moods.json'
+                    url: 'moods.json'
                 })
                 .then(
                     function(response) {

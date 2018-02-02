@@ -25,10 +25,10 @@ gulp.task('injectables', function() {
     var sources = gulp.src(paths, {
         read: false
     });
-    return gulp.src('index.html')
+    return gulp.src('./app/index.html')
         .pipe(wiredep())
-        .pipe(inject(sources))
-        .pipe(gulp.dest('.'));
+        .pipe(inject(sources, {relative: true }))
+        .pipe(gulp.dest('./app'));
 });
 
 gulp.task('js', function() {
@@ -48,7 +48,7 @@ gulp.task('css', function() {
 
 gulp.task('connect', function() {
     connect.server({
-        root: '.',
+        root: './app',
         livereload: true
     })
 });
@@ -58,7 +58,7 @@ gulp.task('app', function() {
         uri: 'http://localhost:8080',
         app: 'Google Chrome'
     };
-    gulp.src('./index.html')
+    gulp.src('./app/index.html')
         .pipe(open(options));
 });
 

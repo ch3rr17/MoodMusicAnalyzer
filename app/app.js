@@ -13,12 +13,12 @@
 
             $stateProvider.state('mood', {
                     url: '/main',
-                    templateUrl: 'app/partials/moods.html',
+                    templateUrl: 'partials/moods.html',
                     controller: 'MoodController as vm'
                 })
                 .state('sentiment', {
                     url: '/sentiment/{mood}',
-                    templateUrl: 'app/partials/mood-analyzer.html',
+                    templateUrl: 'partials/mood-analyzer.html',
                     controller: 'MoodAnalyzerController as vm'
                 })
 
