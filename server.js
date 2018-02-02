@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-var keys = require('./secret');
+// var keys = require('./secret');
 // var spotify = require('spotify');
 var port = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
@@ -9,8 +9,8 @@ var favicon = require('serve-favicon');
 var Spotify = require('node-spotify-api');
  
 var spotify = new Spotify({
-  id: keys.id,
-  secret: keys.secret
+  id: '670239ee509646ceb90b5b6846ed4881',
+  secret: '76778e6db2a34f0e96a0fbbd25535f42'
 });
 
 app.get('/music-for-mood/:mood', function(req, res) {
@@ -29,7 +29,7 @@ app.get('/images-for-mood/:mood', function(req, res) {
     var options = {
         url: 'https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&phrase=' + req.params.mood,
         headers: {
-            'Api-Key': keys.gettyKey
+            'Api-Key': '732j6vdrs2jg4xttgggcwbhw'
         }
     };
 
