@@ -9,10 +9,10 @@
 
         .config(function($urlRouterProvider, $stateProvider, $httpProvider) {
 
-            $urlRouterProvider.otherwise('/main');
+            $urlRouterProvider.otherwise('/');
 
             $stateProvider.state('mood', {
-                    url: '/main',
+                    url: '/',
                     templateUrl: 'partials/moods.html',
                     controller: 'MoodController as vm'
                 })

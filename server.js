@@ -3,7 +3,7 @@ var app = express();
 var request = require('request');
 var keys = require('./secret');
 // var spotify = require('spotify');
-var port = process.env.PORT || 4000;
+var port = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
 
 var Spotify = require('node-spotify-api');
@@ -42,7 +42,8 @@ app.get('/images-for-mood/:mood', function(req, res) {
     });
 });
 
-app.use(favicon(__dirname + '/app/favicon.ico'));
+
 app.use('/', express.static(__dirname + '/app'));
+app.use(favicon(__dirname + '/app/favicon.ico'));
 app.listen(port);
 console.log('App listening on port ' + port);
