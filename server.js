@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-var keys = require('./secret');
+var keys = require('secret');
 // var spotify = require('spotify');
 var port = process.env.PORT || 4000;
 var favicon = require('serve-favicon');
