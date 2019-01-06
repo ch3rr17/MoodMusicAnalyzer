@@ -23,6 +23,7 @@
     "request": "^2.79.0",
     "serve-favicon": "^2.3.2",
     "spotify": "^0.3.0",
+    "unsplash-api": "^1.2.0",
     "wiredep": "^4.0.0"
   }
 }
