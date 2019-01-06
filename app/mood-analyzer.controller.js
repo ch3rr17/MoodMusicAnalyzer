@@ -56,6 +56,7 @@
             MoodAnalyzerFactory.getImagesForMood()
                 .then(
                     function(response) {
+                        console.log('RESPONSE', response);
                         vm.moodImages = response.data.images;
                     },
                     function(error) {

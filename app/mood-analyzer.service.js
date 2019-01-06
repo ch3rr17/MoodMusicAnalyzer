@@ -71,6 +71,8 @@
                 .then(
                     function(response) {
                         defer.resolve(response);
+                        console.log('RESPONSE', response);
+
                         // toastr.success("We have images for mood");
                     },
                     function(error) {
