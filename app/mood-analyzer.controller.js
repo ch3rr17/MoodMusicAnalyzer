@@ -5,10 +5,11 @@
         .module('musicApp')
         .controller('MoodAnalyzerController', MoodAnalyzerController);
 
-    MoodAnalyzerController.$inject = ['MoodAnalyzerFactory', 'toastr', 'mashapeHttpInterceptor', '$stateParams', '$sce'];
+    MoodAnalyzerController.$inject = ['MoodAnalyzerFactory', 'toastr', , '$stateParams', '$sce'];
+    // removed mashapeHttpInterceptor
 
     /* @ngInject */
-    function MoodAnalyzerController(MoodAnalyzerFactory, toastr, mashapeHttpInterceptor, $stateParams,$sce) {
+    function MoodAnalyzerController(MoodAnalyzerFactory, toastr, $stateParams,$sce) {
         var vm = this;
 
         vm.mood = $stateParams.mood;
