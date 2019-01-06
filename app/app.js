@@ -16,11 +16,11 @@
                     templateUrl: 'partials/moods.html',
                     controller: 'MoodController as vm'
                 })
-                // .state('sentiment', {
-                //     url: '/sentiment/{mood}',
-                //     templateUrl: 'partials/mood-analyzer.html',
-                //     controller: 'MoodAnalyzerController as vm'
-                // })
+                .state('sentiment', {
+                    url: '/sentiment/{mood}',
+                    templateUrl: 'partials/mood-analyzer.html',
+                    controller: 'MoodAnalyzerController as vm'
+                })
 
             // $httpProvider.interceptors.push('mashapeHttpInterceptor');
         })
