@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="musicApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>Mood Music Analyzer</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/styles/style.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <h1 style="color: #fff;">Mood Music Analyzer</h1>
+        </div>
+    </nav>
+    <!-- ui view for states -->
+    <div ui-view></div>
+
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-youtube-api-factory/dist/angular-youtube-api-factory.min.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:js -->
+    <script src="/app/app.js"></script>
+    <script src="/app/interceptor.js"></script>
+    <script src="/app/mood-analyzer.controller.js"></script>
+    <script src="/app/mood-analyzer.service.js"></script>
+    <script src="/app/moods.controller.js"></script>
+    <script src="/app/moods.service.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

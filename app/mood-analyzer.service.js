@@ -18,27 +18,27 @@
         return service;
 
         //SENTIMENT API CALL
-        function grabSentimentForMood() {
-            var defer = $q.defer();
+        // function grabSentimentForMood() {
+        //     var defer = $q.defer();
 
-            $http({
-                    method: 'GET',
-                    url: 'https://sentity-v1.p.mashape.com/v1/sentiment?text=' + $stateParams.mood, //Sentity text analytics - https://sentity.io
-                })
-                .then(
-                    function(response) {
-                        defer.resolve(response);
-                        // toastr.success("We have sentiments");
-                    },
-                    function(error) {
-                        defer.reject(error.data)
-                        // toastr.error("no sentiments found");
-                    }
-                );
+        //     $http({
+        //             method: 'GET',
+        //             url: 'https://sentity-v1.p.mashape.com/v1/sentiment?text=' + $stateParams.mood, //Sentity text analytics - https://sentity.io
+        //         })
+        //         .then(
+        //             function(response) {
+        //                 defer.resolve(response);
+        //                 // toastr.success("We have sentiments");
+        //             },
+        //             function(error) {
+        //                 defer.reject(error.data)
+        //                 // toastr.error("no sentiments found");
+        //             }
+        //         );
 
-            return defer.promise;
+        //     return defer.promise;
 
-        }
+        // }
 
         //SPOTIFY API CALL
         function getMusicForMood() {

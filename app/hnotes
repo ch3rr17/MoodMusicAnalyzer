@@ -1,0 +1,93 @@
+heroku apps:rename cb-moodmusicanalyzer
+
+git remote rm heroku
+heroku git:remote -a cb-moodmusicanalyzer
+
+heroku config:set NPM_CONFIG_PRODUCTION=true
+heroku config:set NODE_MODULES_CACHE=TRUE
+
+NODE_MODULES_CACHE=false
+
+Downloading
+
+ If for some reason you can't dial into conference line, the recording will be up via our Past Talks page by COB on Monday at the latest, so you can access there - https://www.apexsystems.com/Events/Pages/CompletedEvents.aspx 
+
+heroku config:set NODE_MODULES_CACHE=false
+git commit -am 'rebuild' --allow-empty
+git push heroku master
+heroku config:unset NODE_MODULES_CACHE
+
+Delta compression using up to 8 threads.
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (21/21), 1.90 KiB | 0 bytes/s, done.
+Total 21 (delta 14), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Node.js app detected
+remote:
+remote: -----> Creating runtime environment
+remote:
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NPM_CONFIG_PRODUCTION=true
+remote:        NODE_VERBOSE=false
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=false
+remote:
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  unspecified
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:
+remote:        Resolving node version 8.x...
+remote:        Downloading and installing node 8.9.4...
+remote:        Using default npm version: 5.6.0
+remote:
+remote: -----> Restoring cache
+remote:        Skipping cache restore (disabled)
+remote:
+remote: -----> Building dependencies
+remote:        Installing node modules (package.json + package-lock)
+remote:
+remote:        > moodmusicanalyzer@1.0.0 postinstall /tmp/build_6c704721c37593cb72db3ca54bf3ad33
+remote:        > bower install
+remote:
+remote:        sh: 1: bower: not found
+remote:        npm ERR! file sh
+remote:        npm ERR! code ELIFECYCLE
+remote:        npm ERR! errno ENOENT
+remote:        npm ERR! syscall spawn
+remote:        npm ERR! moodmusicanalyzer@1.0.0 postinstall: `bower install`
+remote:        npm ERR! spawn ENOENT
+remote:        npm ERR!
+remote:        npm ERR! Failed at the moodmusicanalyzer@1.0.0 postinstall script.
+remote:        npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+remote:
+remote:        npm ERR! A complete log of this run can be found in:
+remote:        npm ERR!     /tmp/npmcache.Ut49P/_logs/2018-02-01T20_28_46_588Z-debug.log
+remote:
+remote: -----> Build failed
+remote:
+remote:        We're sorry this build is failing! You can troubleshoot common issues here:
+remote:        https://devcenter.heroku.com/articles/troubleshooting-node-deploys
+remote:
+remote:        Some possible problems:
+remote:
+remote:        - Node version not specified in package.json
+remote:        https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version
+remote:
+remote:        - Bower may not be tracked in package.json
+remote:        https://devcenter.heroku.com/articles/troubleshooting-node-deploys#ensure-you-aren-t-relying-on-untracked-dependencies
+remote:
+remote:        Love,
+remote:        Heroku
+remote:
+remote:  !     Push rejected, failed to compile Node.js app.
+remote:
+remote:  !     Push failed
+remote: Verifying deploy...
+remote:
+remote: !	Push rejected to vast-stream-75298.
+remote:
+To https://git.heroku.com/vast-stream-75298.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/vast-stream-75298.git'
