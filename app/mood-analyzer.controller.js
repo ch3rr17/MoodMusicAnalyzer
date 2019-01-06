@@ -15,19 +15,19 @@
         
 
         // //SENTIMENT
-        vm.getSentiment = function() {
-            MoodAnalyzerFactory.grabSentimentForMood()
-                .then(
-                    function(response) {
-                        vm.sentiments = response.data;
-                    },
-                    function(error) {
-                        toastr.error('no sentiments');
-                    }
-                );
-        }
+        // vm.getSentiment = function() {
+        //     MoodAnalyzerFactory.grabSentimentForMood()
+        //         .then(
+        //             function(response) {
+        //                 vm.sentiments = response.data;
+        //             },
+        //             function(error) {
+        //                 toastr.error('no sentiments');
+        //             }
+        //         );
+        // }
 
-        vm.getSentiment();
+        // vm.getSentiment();
 
 
         //MUSIC

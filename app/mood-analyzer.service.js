@@ -10,7 +10,7 @@
     /* @ngInject */
     function MoodAnalyzerFactory($http, $q, toastr, $stateParams) {
         var service = {
-            grabSentimentForMood: grabSentimentForMood,
+            // grabSentimentForMood: grabSentimentForMood,
             getMusicForMood: getMusicForMood,
             getImagesForMood: getImagesForMood
         };
