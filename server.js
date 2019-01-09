@@ -14,8 +14,8 @@ var spotify = new Spotify({
 });
 
 var unsplash = require('unsplash-api');
-// var clientId = '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'; //this is required to verify your application's requests
-// unsplash.init(clientId);
+var clientId = '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'; //this is required to verify your application's requests
+unsplash.init(clientId);
 
 // unsplash.photos.getRandomPhoto({ featured: true })
 //     .then(toJson)
@@ -45,23 +45,34 @@ app.get('/music-for-mood/:mood', function (req, res) {
 //   } 
 // });
 
-app.get('/images-for-mood/:mood', function(req, res) {
-    var options = {
-        url: 'https://api.unsplash.com/search/photos?page=1&query=' + req.params.mood + '&per_page=30&page=2',
-        headers: {
-            'Api-Key': '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'
-        }
-    };
-
-    request(options, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-          console.log('PHOTOS', body);
-            res.send(body);
-        } else {
-            res.send(error);
-        }
-    });
+app.get('/imags-for-mood/;mood', function(req,res){
+  unsplash.searchPhotos({
+    query: req.params.mood
+  }, function(err,data){
+    if (data) {
+      res.send(data);
+      return;
+    }
+  });
 });
+
+// app.get('/images-for-mood/:mood', function(req, res) {
+//     var options = {
+//         url: 'https://api.unsplash.com/search/photos?page=1&query=' + req.params.mood + '&per_page=30&page=2',
+//         headers: {
+//             'Api-Key': '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'
+//         }
+//     };
+
+//     request(options, function(error, response, body) {
+//         if (!error && response.statusCode == 200) {
+//           console.log('PHOTOS', body);
+//             res.send(body);
+//         } else {
+//             res.send(error);
+//         }
+//     });
+// });
 
 // app.get('/images-for-mood/:mood', function(req, res) {
 //     var options = {
