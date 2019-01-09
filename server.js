@@ -45,7 +45,7 @@ app.get('/music-for-mood/:mood', function (req, res) {
 //   } 
 // });
 
-app.get('/imags-for-mood/:mood', function(req,res){
+app.get('/images-for-mood/:mood', function(req,res){
   unsplash.searchPhotos({
     query: req.params.mood
   }, function(err,data){
