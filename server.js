@@ -84,22 +84,22 @@ app.get('/images-for-mood/:mood', function(req,res){
 //     });
 // });
 
-app.get('/images-for-mood/:mood', function(req, res) {
-    var options = {
-        url: 'https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&phrase=' + req.params.mood,
-        headers: {
-            'Api-Key': '732j6vdrs2jg4xttgggcwbhw'
-        }
-    };
+// app.get('/images-for-mood/:mood', function(req, res) {
+//     var options = {
+//         url: 'https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&phrase=' + req.params.mood,
+//         headers: {
+//             'Api-Key': '732j6vdrs2jg4xttgggcwbhw'
+//         }
+//     };
 
-    request(options, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            res.send(body);
-        } else {
-            res.send(error);
-        }
-    });
-});
+//     request(options, function(error, response, body) {
+//         if (!error && response.statusCode == 200) {
+//             res.send(body);
+//         } else {
+//             res.send(error);
+//         }
+//     });
+// });
 
 
 app.use('/', express.static(__dirname + '/app'));
