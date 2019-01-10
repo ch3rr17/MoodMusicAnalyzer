@@ -69,9 +69,9 @@
                     url: '/images-for-mood/' + $stateParams.mood
                 })
                 .then(
-                    function(response) {
-                        defer.resolve(response);
-                        console.log('RESPONSE', response);
+                    function(data) {
+                        defer.resolve(data);
+                        console.log('RESPONSE', data);
 
                         // toastr.success("We have images for mood");
                     },
