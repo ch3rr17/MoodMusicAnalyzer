@@ -13,9 +13,9 @@ var spotify = new Spotify({
   secret: '76778e6db2a34f0e96a0fbbd25535f42'
 });
 
-// var unsplash = require('unsplash-api');
-// var clientId = '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'; //this is required to verify your application's requests
-// unsplash.init(clientId);
+var unsplash = require('unsplash-api');
+var clientId = '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'; //this is required to verify your application's requests
+unsplash.init(clientId);
 
 // unsplash.photos.getRandomPhoto({ featured: true })
 //     .then(toJson)
@@ -45,16 +45,26 @@ app.get('/music-for-mood/:mood', function (req, res) {
 //   } 
 // });
 
-// app.get('/images-for-mood/:mood', function(req,res){
-//   unsplash.searchPhotos({
-//     query: req.params.mood
-//   }, function(err,data){
-//     if (data) {
-//       res.send(data);
-//       return;
-//     }
-//   });
-// });
+app.get('/images-for-mood/:mood', function(req,res){
+  unsplash.searchPhotos(req.params.mood, [1, 2, 3], 2, 20, function(error, photos, link) {
+
+  }, function(err,data){
+    if(data){
+      res.send(data);
+      return;
+    }
+  });
+  
+  
+  // unsplash.searchPhotos({
+  //   query: req.params.mood
+  // }, function(err,data){
+  //   if (data) {
+  //     res.send(data);
+  //     return;
+  //   }
+  // });
+});
 
 // app.get('/images-for-mood/:mood', function(req, res) {
 //     var options = {
