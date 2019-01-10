@@ -14,8 +14,8 @@ var spotify = new Spotify({
 });
 
 var unsplash = require('unsplash-api');
-var clientId = '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'; //this is required to verify your application's requests
-unsplash.init(clientId);
+// var clientId = '9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe'; //this is required to verify your application's requests
+// unsplash.init(clientId);
 
 // unsplash.photos.getRandomPhoto({ featured: true })
 //     .then(toJson)
@@ -68,8 +68,7 @@ app.get('/music-for-mood/:mood', function (req, res) {
 // https://api.unsplash.com/search/photos/?client_id=9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe&query=happy&per_page=30&page=2
 app.get('/images-for-mood/:mood', function(req, res) {
     var options = {
-        url: 'https://api.unsplash.com/search/photos?' + clientId + '&query=' + req.params.mood + '&per_page=30&page=2',
-        
+      url: 'https://api.unsplash.com/search/photos/?client_id=9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe&query=' + req.params.mood + '&per_page=30&page=2'
     };
 
     request(options, function(error, response, body) {

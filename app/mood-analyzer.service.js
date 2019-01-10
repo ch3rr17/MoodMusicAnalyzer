@@ -66,13 +66,14 @@
             var defer = $q.defer();
             $http({
                     method: 'GET',
+                    header: {
+                      'Content-Type': "application/json",
+                    },
                     url: '/images-for-mood/' + $stateParams.mood
                 })
                 .then(
-                    function(data) {
-                        defer.resolve(data);
-                        console.log('RESPONSE', data);
-
+                    function(response) {
+                        defer.resolve(response);
                         // toastr.success("We have images for mood");
                     },
                     function(error) {

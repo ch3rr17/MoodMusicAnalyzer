@@ -56,8 +56,7 @@
             MoodAnalyzerFactory.getImagesForMood()
                 .then(
                     function(response) {
-                        console.log('RESPONSE', response);
-                        // vm.moodImages = response.data.images;
+                        vm.moodImages = response.data.results;
                     },
                     function(error) {
                         // toastr.error('no images found for that mood');
