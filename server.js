@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-// var keys = require('./secret');
+var keys = require('./secret');
 // var spotify = require('spotify');
 var port = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
@@ -67,8 +67,9 @@ app.get('/music-for-mood/:mood', function (req, res) {
 // });
 // https://api.unsplash.com/search/photos/?client_id=9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe&query=happy&per_page=30&page=2
 app.get('/images-for-mood/:mood', function(req, res) {
+
     var options = {
-      url: 'https://api.unsplash.com/search/photos/?client_id=9a1bf40a801d3f2f21cc400f8a491768723587a6231dede6a4eef13056ed8ffe&query=' + req.params.mood + '&per_page=30&page=2'
+      url: 'https://api.unsplash.com/search/photos/?client_id=' + keys.id +'&query=' + req.params.mood + '&per_page=30&page=2'
     };
 
     request(options, function(error, response, body) {
