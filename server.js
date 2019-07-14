@@ -3,7 +3,7 @@ var app = express();
 var request = require('request');
 var keys = require('./secret');
 // var spotify = require('spotify');
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 var favicon = require('serve-favicon');
 
 var Spotify = require('node-spotify-api');
@@ -102,5 +102,8 @@ app.get('/images-for-mood/:mood', function(req, res) {
 
 app.use('/', express.static(__dirname + '/app'));
 app.use(favicon(__dirname + '/app/favicon.ico'));
-app.listen(port);
+// app.listen(port);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 console.log('App listening on port ' + port);
