@@ -21,8 +21,11 @@
                 <!-- <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4' ng-repeat="moodImage in vm.moodImages | limitTo: 9">
                     <marquee behavior="scroll" direction="down"><img ng-src="{{moodImage.display_sizes[0].uri}}" alt="" width="150px" height="150px" style="padding: 10px;"></marquee>
                 </div> -->
-                <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4' ng-repeat="moodImage in vm.moodImages | limitTo: 9">
-                    <marquee behavior="scroll" direction="down"><img ng-src="{{moodImage.urls.thumb}}" alt="" width="150px" height="150px" style="padding: 10px;"></marquee>
+                <h4 ng-show='vm.noPhotos'>No photos found for this mood :(</h4>
+                <div ng-hide='vm.noPhotos'>
+                  <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4' ng-repeat="moodImage in vm.moodImages | limitTo: 9">
+                      <marquee behavior="scroll" direction="down"><img ng-src="{{moodImage.urls.thumb}}" alt="" width="150px" height="150px" style="padding: 10px;"></marquee>
+                  </div>
                 </div>
             </div>
         </div>

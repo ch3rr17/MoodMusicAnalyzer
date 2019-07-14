@@ -13,6 +13,7 @@
         var vm = this;
 
         vm.mood = $stateParams.mood;
+        vm.noPhotos = false;
         
 
         // //SENTIMENT
@@ -57,6 +58,9 @@
                 .then(
                     function(response) {
                         vm.moodImages = response.data.results;
+                        if (vm.moodImages.length === 0) {
+                          vm.noPhotos = true;
+                        }
                     },
                     function(error) {
                         // toastr.error('no images found for that mood');
